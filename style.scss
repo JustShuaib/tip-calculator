@@ -89,7 +89,7 @@ main {
 .btn__custom {
   @extend %input-shared;
   text-align: center;
-  padding: 0.2rem;
+  // padding: 0.4rem;
   width: 100%;
   &::placeholder {
     color: $dark-grayish-cyan;
