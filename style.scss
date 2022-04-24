@@ -89,6 +89,7 @@ main {
   @extend %input-shared;
   text-align: center;
   padding: 0.2rem;
+  max-width: 90%;
   &::placeholder {
     color: $dark-grayish-cyan;
   }
@@ -119,7 +120,7 @@ main {
   background-color: $very-dark-cyan;
   border-radius: 10px;
   padding: 1rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
   font-size: 1rem;
   height: 100%;
 
