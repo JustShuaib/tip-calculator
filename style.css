@@ -74,7 +74,7 @@ body {
 }
 
 .heading {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: hsl(183deg, 100%, 15%);
   text-align: center;
@@ -148,6 +148,7 @@ main label {
 
 .btn__custom {
   text-align: center;
+  padding: 0.3rem 0;
   width: 100%;
 }
 .btn__custom::-moz-placeholder {
@@ -197,8 +198,13 @@ main label {
 .card__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   color: hsl(185deg, 41%, 84%);
+}
+@media screen and (min-width: 40em) {
+  .card__row:first-of-type {
+    margin-top: 1.5rem;
+  }
 }
 .card__row:last-of-type {
   margin-top: 1rem;
@@ -211,7 +217,7 @@ main label {
 }
 
 .card__amount {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: hsl(172deg, 67%, 45%);
 }
 

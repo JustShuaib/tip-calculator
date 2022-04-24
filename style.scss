@@ -12,7 +12,7 @@ body {
   background-color: $light-grayish-cyan;
 }
 .heading {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: $very-dark-cyan;
   text-align: center;
@@ -89,7 +89,7 @@ main {
 .btn__custom {
   @extend %input-shared;
   text-align: center;
-  // padding: 0.4rem;
+  padding: 0.3rem 0;
   width: 100%;
   &::placeholder {
     color: $dark-grayish-cyan;
@@ -136,8 +136,13 @@ main {
 .card__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   color: $light-grayish-cyan;
+  @media screen and (min-width: 40em) {
+    &:first-of-type {
+      margin-top: 1.5rem;
+    }
+  }
   &:last-of-type {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -149,7 +154,7 @@ main {
   display: block;
 }
 .card__amount {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: $strong-cyan;
 }
 .card__reset {
