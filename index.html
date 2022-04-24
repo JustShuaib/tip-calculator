@@ -38,19 +38,19 @@
           <p class="btn__container--title">Select Tip %</p>
           <ul class="btn__group">
             <li>
-              <button class="btn">5%</button>
+              <button class="btn" value="5">5%</button>
             </li>
             <li>
-              <button class="btn">10%</button>
+              <button class="btn" value="10">10%</button>
             </li>
             <li>
-              <button class="btn btn--active">15%</button>
+              <button class="btn btn--active" value="15">15%</button>
             </li>
             <li>
-              <button class="btn">25%</button>
+              <button class="btn" value="25">25%</button>
             </li>
             <li>
-              <button class="btn">50%</button>
+              <button class="btn" value="50">50%</button>
             </li>
             <li>
               <input
@@ -85,14 +85,14 @@
             <span class="card__bold">Tip Amount</span>
             / person
           </div>
-          <span class="card__amount">$4.27</span>
+          <span class="card__amount" id="tip-amount">$0.00</span>
         </div>
         <div class="card__row">
           <div>
             <span class="card__bold">Total</span>
             / person
           </div>
-          <span class="card__amount">$32.79</span>
+          <span class="card__amount" id="total-amount">$0.00</span>
         </div>
         <button type="reset" disabled class="card__reset" id="reset-btn">
           reset
