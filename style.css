@@ -11,7 +11,7 @@
 
 .bill__input, .btn__custom, .number__input {
   width: 100%;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 1rem;
   text-align: right;
   font: inherit;
   color: hsl(186deg, 14%, 43%);
@@ -34,7 +34,7 @@
 
 .bill__img, .number__img {
   position: absolute;
-  padding: 0.8rem;
+  padding: 0.9rem;
   text-align: center;
 }
 
