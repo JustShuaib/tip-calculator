@@ -1,4 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+.btn, .card__reset {
+  padding: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
+  background-color: hsl(186deg, 14%, 43%);
+}
+.btn:hover, .card__reset:hover {
+  background-color: wheat;
+}
+
+.bill__input, .btn__custom, .number__input {
+  width: 100%;
+  padding: 0.2rem 1rem;
+  text-align: right;
+  font: inherit;
+  color: hsl(186deg, 14%, 43%);
+  background-color: hsl(180deg, 37%, 97%);
+  border: none;
+  border-radius: 5px;
+}
+.bill__input:focus, .btn__custom:focus, .number__input:focus {
+  outline: 2px solid hsl(172deg, 67%, 45%);
+}
+.bill__input::-moz-placeholder, .btn__custom::-moz-placeholder, .number__input::-moz-placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+.bill__input:-ms-input-placeholder, .btn__custom:-ms-input-placeholder, .number__input:-ms-input-placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+.bill__input::placeholder, .btn__custom::placeholder, .number__input::placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+
+.bill__img, .number__img {
+  position: absolute;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.btn, .card__reset {
+  font: inherit;
+  padding: 0.3rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(180deg, 37%, 97%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,5 +69,169 @@
 
 body {
   font: 1.5rem "Space Mono", monospace;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+.heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: hsl(183deg, 100%, 15%);
+  text-align: center;
+  letter-spacing: 0.5rem;
+  margin: 2rem 0;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem;
+  display: grid;
+}
+@media screen and (min-width: 40em) {
+  main {
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main label {
+  font-size: 1rem;
+  color: hsl(186deg, 14%, 43%);
+}
+
+.container {
+  padding: 0.5rem;
+}
+
+.bill {
+  position: relative;
+  width: 100%;
+}
+
+.btn__container {
+  margin: 1rem 0;
+  color: hsl(186deg, 14%, 43%);
+}
+.btn__container--title {
+  font-size: 1rem;
+}
+
+.btn__group {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 40em) {
+  .btn__group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.btn__group li {
+  list-style-type: none;
+}
+
+.btn:hover {
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.btn--active {
   background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.btn__custom {
+  text-align: center;
+  padding: 0.2rem;
+}
+.btn__custom::-moz-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.btn__custom:-ms-input-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.btn__custom::placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+
+.people {
+  position: relative;
+  width: 100%;
+}
+
+.label__container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 40em) {
+  .label__container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card {
+  position: relative;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  height: 100%;
+}
+@media screen and (min-width: 40em) {
+  .card {
+    width: 350px;
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(185deg, 41%, 84%);
+  margin-bottom: auto;
+}
+.card__row:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.card__bold {
+  color: hsl(180deg, 37%, 97%);
+  display: block;
+}
+
+.card__amount {
+  font-size: 1.5rem;
+  color: hsl(172deg, 67%, 45%);
+}
+
+.card__reset {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+  width: 90%;
+}
+.card__reset:hover {
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+.err--msg {
+  color: red;
+  font-size: 1rem;
+}
+
+.input--err {
+  border: 2px solid red;
 }
