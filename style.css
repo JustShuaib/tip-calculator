@@ -1,20 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-.btn, .card__reset {
-  padding: 0.5rem;
-  border-radius: 20px;
-  text-align: center;
-  background-color: hsl(186deg, 14%, 43%);
-}
-.btn:hover, .card__reset:hover {
-  background-color: wheat;
-}
-
 .bill__input, .btn__custom, .number__input {
   width: 100%;
   padding: 0.3rem 1rem;
   text-align: right;
   font: inherit;
-  color: hsl(186deg, 14%, 43%);
+  color: hsl(183deg, 100%, 15%);
   background-color: hsl(180deg, 37%, 97%);
   border: none;
   border-radius: 5px;
