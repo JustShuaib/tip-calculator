@@ -145,7 +145,7 @@ main {
   }
   &:last-of-type {
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -171,6 +171,13 @@ main {
   width: 90%;
   &:hover {
     background-color: $light-grayish-cyan;
+  }
+  &:disabled {
+    background-color: scale-color(
+      $color: $strong-cyan,
+      $lightness: -40%,
+      $alpha: 40%
+    );
   }
 }
 //  ********** Helper classes *****

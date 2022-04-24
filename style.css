@@ -198,7 +198,7 @@ main label {
 }
 .card__row:last-of-type {
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .card__bold {
@@ -225,6 +225,9 @@ main label {
 }
 .card__reset:hover {
   background-color: hsl(185deg, 41%, 84%);
+}
+.card__reset:disabled {
+  background-color: #177367;
 }
 
 .err--msg {
