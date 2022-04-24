@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-// Custom styles
-@import "variables";
+@use "utilities/font" as *;
+@use "utilities/variables" as *;
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +7,5 @@
 }
 body {
   font: 1.5rem "Space Mono", monospace;
-  background: $strong-cyan;
-  color: $very-light-grayish-cyan;
+  background-color: $strong-cyan;
 }
