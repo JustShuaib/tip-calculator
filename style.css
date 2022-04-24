@@ -148,6 +148,7 @@ main label {
   text-align: center;
   padding: 0.2rem;
   max-width: 90%;
+  background-color: red;
 }
 .btn__custom::-moz-placeholder {
   color: hsl(186deg, 14%, 43%);
