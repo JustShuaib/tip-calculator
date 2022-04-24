@@ -64,7 +64,6 @@ main {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  background-color: green;
   margin-bottom: 2rem;
   @media screen and (min-width: 40em) {
     & {
@@ -91,9 +90,7 @@ main {
   @extend %input-shared;
   text-align: center;
   padding: 0.2rem;
-  max-width: 90%;
-  // width: auto;
-  background-color: red;
+  width: 100%;
   &::placeholder {
     color: $dark-grayish-cyan;
   }
