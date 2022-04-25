@@ -34,11 +34,11 @@ function handlePeople(e) {
 function showErrorMessage(event, prop, index) {
   if (prop <= 0) {
     errMsgs[index].textContent = `Can't be ${prop === 0 ? "zero" : "negative"}`;
-    event.target.classList.add("input--err");
+    event.target.style.outline = "2px solid red";
     return;
   }
   errMsgs[index].textContent = "";
-  event.target.classList.remove("input--err");
+  event.target.style.outlineColor = "hsl(172, 67%, 45%)";
   resetBtn.disabled = false;
 }
 function handleTip(e) {
