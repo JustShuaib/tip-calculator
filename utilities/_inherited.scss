@@ -1,0 +1,34 @@
+@use "variables" as variables;
+%input-shared {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  text-align: right;
+  font: inherit;
+  color: variables.$very-dark-cyan;
+  background-color: variables.$very-light-grayish-cyan;
+  border: none;
+  border-radius: 5px;
+  &:focus {
+    outline: 2px solid variables.$strong-cyan;
+  }
+  &::placeholder {
+    color: variables.$grayish-cyan;
+  }
+}
+%input-icon-shared {
+  position: absolute;
+  padding: 0.9rem;
+  text-align: center;
+}
+
+%btn-shared {
+  font: inherit;
+  padding: 0.3rem 2rem;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: variables.$very-dark-cyan;
+  color: variables.$very-light-grayish-cyan;
+  cursor: pointer;
+  transition: all 0.3s;
+}
