@@ -62,7 +62,12 @@ function handleCustomTip(e) {
 function calcPerPerson() {
   const totalPerPerson = (bill * (1 + tip)) / people;
   const tipPerPerson = (bill * tip) / people;
-  if (totalPerPerson > 0 && tipPerPerson > 0) {
+  if (
+    totalPerPerson > 0 &&
+    tipPerPerson > 0 &&
+    isFinite(totalPerPerson) &&
+    isFinite(tipPerPerson)
+  ) {
     tipOutput.textContent = `$${tipPerPerson.toFixed(2)}`;
     totalOutput.textContent = `$${totalPerPerson.toFixed(2)}`;
   }
@@ -71,6 +76,9 @@ function calcPerPerson() {
 function resetState() {
   resetBtn.disabled = true;
   tipBtn.forEach((btn) => btn.classList.remove("btn--active"));
+  errMsgs.forEach((msg) => (msg.textContent = ""));
+  peopleInput.classList.remove("input--err");
+  billInput.classList.remove("input--err");
   (bill = 0), (tip = 0), (customTip = 0), (people = 0);
   tipOutput.textContent = "$0.00";
   totalOutput.textContent = "$0.00";
