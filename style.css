@@ -82,6 +82,7 @@ main {
 @media screen and (min-width: 40em) {
   main {
     border-radius: 20px;
+    padding-bottom: 1.5rem;
     grid-template-columns: 1fr 1fr;
     position: absolute;
     top: 50%;
