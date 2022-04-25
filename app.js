@@ -25,13 +25,11 @@ function handleBill(e) {
   bill = Number(e.target.value);
   showErrorMessage(e, bill, 0);
   calcPerPerson();
-  e.preventDefault();
 }
 function handlePeople(e) {
   people = Number(e.target.value);
   showErrorMessage(e, people, 1);
   calcPerPerson();
-  e.preventDefault();
 }
 function showErrorMessage(event, prop, index) {
   if (prop <= 0) {
@@ -54,12 +52,11 @@ function handleTip(e) {
 }
 function handleCustomTip(e) {
   customTip = Number(e.target.value) / 100;
-  if (customTip > 0) {
-    tipBtn.forEach((btn) => btn.classList.remove("btn--active"));
-    resetBtn.disabled = false;
-    tip = customTip;
-    calcPerPerson();
-  }
+  if (customTip <= 0) return;
+  tipBtn.forEach((btn) => btn.classList.remove("btn--active"));
+  resetBtn.disabled = false;
+  tip = customTip;
+  calcPerPerson();
 }
 
 function calcPerPerson() {
