@@ -72,7 +72,7 @@ body {
   margin: 2rem 0;
 }
 
-main {
+form {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 20px 20px 0 0;
   padding: 1.5rem;
@@ -80,7 +80,7 @@ main {
   display: grid;
 }
 @media screen and (min-width: 40em) {
-  main {
+  form {
     border-radius: 20px;
     padding-bottom: 1.5rem;
     grid-template-columns: 1fr 1fr;
@@ -90,7 +90,7 @@ main {
     transform: translate(-50%, -50%);
   }
 }
-main label {
+form label {
   font-size: 1rem;
   color: hsl(186deg, 14%, 43%);
 }

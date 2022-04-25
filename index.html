@@ -14,90 +14,96 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <h1 class="heading">
-      spli <br />
-      tter
-    </h1>
     <main>
-      <div class="container">
-        <div class="label__container">
-          <label for="bill">Bill </label>
-          <p class="err--msg"></p>
+      <h1 class="heading">
+        spli <br />
+        tter
+      </h1>
+      <form>
+        <div class="container">
+          <div class="label__container">
+            <label for="bill">Bill </label>
+            <p class="err--msg"></p>
+          </div>
+          <div class="bill">
+            <img
+              src="./images/icon-dollar.svg"
+              alt="dollar"
+              class="bill__img"
+            />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              class="bill__input"
+              placeholder="0"
+            />
+          </div>
+          <div class="btn__container">
+            <p class="btn__container--title">Select Tip %</p>
+            <ul class="btn__group">
+              <li>
+                <button class="btn" value="0.05">5%</button>
+              </li>
+              <li>
+                <button class="btn" value="0.1">10%</button>
+              </li>
+              <li>
+                <button class="btn" value="0.15">15%</button>
+              </li>
+              <li>
+                <button class="btn" value="0.25">25%</button>
+              </li>
+              <li>
+                <button class="btn" value="0.5">50%</button>
+              </li>
+              <li>
+                <input
+                  type="number"
+                  class="btn__custom"
+                  name="custom"
+                  id="custom"
+                  placeholder="Custom"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="label__container">
+            <label for="number">Number of People </label>
+            <p class="err--msg" id="people-error"></p>
+          </div>
+          <div class="people">
+            <img src="./images/icon-person.svg" alt="" class="number__img" />
+            <input
+              type="number"
+              name="number"
+              id="number"
+              class="number__input"
+              placeholder="0"
+            />
+          </div>
         </div>
-        <div class="bill">
-          <img src="./images/icon-dollar.svg" alt="dollar" class="bill__img" />
-          <input
-            type="number"
-            name="bill"
-            id="bill"
-            class="bill__input"
-            placeholder="0"
-          />
-        </div>
-        <div class="btn__container">
-          <p class="btn__container--title">Select Tip %</p>
-          <ul class="btn__group">
-            <li>
-              <button class="btn" value="5">5%</button>
-            </li>
-            <li>
-              <button class="btn" value="10">10%</button>
-            </li>
-            <li>
-              <button class="btn btn--active" value="15">15%</button>
-            </li>
-            <li>
-              <button class="btn" value="25">25%</button>
-            </li>
-            <li>
-              <button class="btn" value="50">50%</button>
-            </li>
-            <li>
-              <input
-                type="number"
-                class="btn__custom"
-                name="custom"
-                id="custom"
-                placeholder="Custom"
-              />
-            </li>
-          </ul>
-        </div>
-        <div class="label__container">
-          <label for="number">Number of People </label>
-          <p class="err--msg"></p>
-        </div>
-        <div class="people">
-          <img src="./images/icon-person.svg" alt="" class="number__img" />
-          <input
-            type="number"
-            name="number"
-            id="number"
-            class="number__input"
-            placeholder="0"
-          />
-        </div>
-      </div>
 
-      <div class="card">
-        <div class="card__row">
-          <div>
-            <span class="card__bold">Tip Amount</span>
-            / person
+        <div class="card">
+          <div class="card__row">
+            <div>
+              <span class="card__bold">Tip Amount</span>
+              / person
+            </div>
+            <span class="card__amount" id="tip-amount">$0.00</span>
           </div>
-          <span class="card__amount" id="tip-amount">$0.00</span>
-        </div>
-        <div class="card__row">
-          <div>
-            <span class="card__bold">Total</span>
-            / person
+          <div class="card__row">
+            <div>
+              <span class="card__bold">Total</span>
+              / person
+            </div>
+            <span class="card__amount" id="total-amount">$0.00</span>
           </div>
-          <span class="card__amount" id="total-amount">$0.00</span>
+          <button type="reset" disabled class="card__reset" id="reset-btn">
+            reset
+          </button>
         </div>
-        <button type="reset" disabled class="card__reset" id="reset-btn">
-          reset
-        </button>
-      </div>
+      </form>
     </main>
     <script src="./app.js"></script>
   </body>
