@@ -6,14 +6,11 @@ const tipOutput = document.getElementById("tip-amount");
 const totalOutput = document.getElementById("total-amount");
 const tipBtn = document.querySelectorAll(".btn");
 const inputs = document.querySelectorAll("input");
-const peopleErr = document.getElementById("people-error");
 const errMsgs = document.querySelectorAll(".err--msg");
 const form = document.querySelector("form");
 let bill, tip, customTip, people;
 inputs.forEach((inputElement) => {
-  inputElement.addEventListener("change", () => {
-    resetBtn.disabled = false;
-  });
+  inputElement.addEventListener("change", () => {});
 });
 
 billInput.addEventListener("keyup", (e) => {
@@ -25,6 +22,7 @@ billInput.addEventListener("keyup", (e) => {
     errMsgs[0].textContent = "";
     billInput.classList.remove("input--err");
   }
+  resetBtn.disabled = false;
   calcPerPerson();
   e.preventDefault();
 });
@@ -37,6 +35,7 @@ peopleInput.addEventListener("keyup", (e) => {
     errMsgs[1].textContent = "";
     peopleInput.classList.remove("input--err");
   }
+  resetBtn.disabled = false;
   calcPerPerson();
   e.preventDefault();
 });
@@ -45,14 +44,19 @@ tipBtn.forEach((btn) => {
     tipBtn.forEach((btn) => btn.classList.remove("btn--active"));
     btn.classList.add("btn--active");
     tip = Number(btn.value);
+    customBtn.value = "";
+    resetBtn.disabled = false;
     calcPerPerson();
     e.preventDefault();
   });
 });
 customBtn.addEventListener("keyup", (e) => {
   customTip = Number(e.target.value) / 100;
-  if (customTip > 0) tip = customTip;
-  console.log(customTip);
+  if (customTip > 0) {
+    resetBtn.disabled = false;
+    tip = customTip;
+    calcPerPerson();
+  }
 });
 function calcPerPerson() {
   const totalPerPerson = (bill * (1 + tip)) / people;
@@ -62,7 +66,7 @@ function calcPerPerson() {
     totalOutput.textContent = `$${totalPerPerson.toFixed(2)}`;
   }
 }
-form.addEventListener("reset", (e) => {
+form.addEventListener("reset", () => {
   resetBtn.disabled = true;
   tipBtn.forEach((btn) => btn.classList.remove("btn--active"));
   (bill = 0), (tip = 0), (customTip = 0), (people = 0);
