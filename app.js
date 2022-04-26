@@ -1,12 +1,12 @@
-const billInput = document.getElementById("bill");
-const resetBtn = document.getElementById("reset-btn");
-const customBtn = document.getElementById("custom");
-const peopleInput = document.getElementById("number");
-const tipOutput = document.getElementById("tip-amount");
-const totalOutput = document.getElementById("total-amount");
-const tipBtn = document.querySelectorAll(".btn");
-const errMsgs = document.querySelectorAll(".err--msg");
-const form = document.querySelector("form");
+const billInput = document.getElementById("bill"),
+  resetBtn = document.getElementById("reset-btn"),
+  customBtn = document.getElementById("custom"),
+  peopleInput = document.getElementById("number"),
+  tipOutput = document.getElementById("tip-amount"),
+  totalOutput = document.getElementById("total-amount"),
+  tipBtn = document.querySelectorAll(".btn"),
+  errMsgs = document.querySelectorAll(".err--msg"),
+  form = document.querySelector("form");
 
 // ***** GLOBAL VARS *******
 let bill, tip, customTip, people;
